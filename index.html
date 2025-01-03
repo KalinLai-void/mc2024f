@@ -4,7 +4,7 @@
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>作品集 Portfolio</title>
+<title>Kalin's 作品集 Portfolio</title>
 
 <!-- D3, jquery -->
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -14,207 +14,9 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- https://alexlenail.me/NN-SVG/about.html -->
 <link rel="icon" href="./favicon.svg"/>
-<style type="text/css">
-
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
-
-  @font-face {
-    font-family:'CircleFont';
-    src: url(CircleFont_v2.woff2);
-  }
-
-
-  body {
-    background-color: rgb(106, 76, 156); /* #6A4C9C */
-    color: rgb(106, 76, 156);
-    font-family: 'CircleFont', 'Noto Serif JP', serif;
-  }
-
-  .container-fluid {
-    width:  90%;
-  }
-
-  .hw12 {
-    border: 1px solid rgb(159, 53, 58);
-  }
-
-  .toprow {
-    margin-top: 16px;
-  }
-
-  .bottomrow {
-    margin-bottom: 16px;
-  }
-
-
-  .twenty {
-    border: 1px solid #f9eced;
-    color: #f9eced;
-    padding: 8px;
-    font-size: 16pt;
-  }
-
-  .twenty a {
-    color:  yellow;
-  }
-
-  .twenty a:hover {
-    color: #f9eced;
-    font-size:  16pt;
-  }
-
-  svg {
-    border: 2px solid rgb(159, 53, 58);
-  }
-
-  path {
-    pointer-events: all;
-    fill: #f9eced;
-    stroke: rgb(159, 53, 58);
-    stroke-opacity: 0.95;
-    stroke-width: 1px;
-  }
-
-  .active circle {
-    stroke: #f9eced;
-    stroke-width: 2px;
-  }
-
-  svg g text {
-    fill: rgba(255, 255, 255, 0.95);
-    background-color: rgba(255, 255, 0, 0.1);
-    text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
-    font-size: 24pt;
-    text-anchor: middle;
-  }
-
-  .twenty:hover {
-      box-shadow: 0 0 5px 3px #f9eced;
-      color: cyan; 
-      text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
-  }
-
-  img:hover {
-      box-shadow: 0 0 1px 1px #f9eced;
-      animation-name: happy;
-      animation-duration: 0.5s;
-      animation-iteration-count: infinite;
-  }
-
-  @keyframes happy {
-      0% {transform: translateY(0px);}
-      25% {transform: translateY(-15px);}
-      50% {transform: translateY(0px);}
-      75% {transform: translateY(-5px);}
-      100% {transform: translateY(0px);}
-  }
-
-  img.withborder {
-    border: 1px solid #f9eced;
-  }
-
-  /* 揮手 */
-  .github-corner:hover 
-  .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
-  }
-  @keyframes octocat-wave {
-    0%,100% {transform:rotate(0)}
-    20%,60% {transform:rotate(-25deg)}
-    40%,80% {transform:rotate(10deg)}
-  }
-  @media (max-width:500px) {
-    .github-corner:hover 
-    .octo-arm {
-      animation:none
-    }
-    .github-corner 
-    .octo-arm {
-      animation: octocat-wave 560ms ease-in-out
-    }
-  }
-
-  /* 波浪 */
-  a {
-    color:#f30;
-    text-decoration: none; 
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%23fff' d='M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3'/%3E%3C/svg%3E") repeat-x 0 100%; 
-    background-size:20px auto; 
-    animation: waveMove 1s infinite linear;
-  }
-  a:hover {
-    color:#f30;
-    text-decoration: none;
-    background: none;
-    animation: none;
-    text-decoration: underline;
-    padding:2px 0;
-  }
-  @keyframes waveMove {
-    from { background-position:0 100%; }
-    to { background-position:20px 100%; }
-  }
-  /* 波浪 */
-
-  table {
-    border-collapse: collapse;
-    border: 2px solid white; /* rgba(217,140,144,1) */
-    font-size:  12pt;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Noto Serif JP', serif;
-  }
-
-  td,  th {
-  border: 1px solid white;
-  padding: 2px 8px;
-  }
-
-  .flipswitch
-  {
-      position: relative;
-      background: white;
-      width: 120px;
-      height: 20px;
-      -webkit-appearance: initial;
-      border-radius: 3px;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      outline:none;
-      font-size: 14px;
-      font-family: Trebuchet, Arial, sans-serif;
-      font-weight: bold;
-      cursor:pointer;
-      border:1px solid #ddd;
-  }
-  .flipswitch:after
-  {
-      position:absolute;
-      top:5%;
-      display:block; 
-      line-height:16px;
-      width:45%;
-      height:90%;
-      background:#fff;
-      box-sizing:border-box;
-      text-align:center;
-      transition: all 0.3s ease-in 0s; 
-      color:rgba(159,53,58,1);
-      border:#888 1px solid;
-      border-radius:3px;
-  }
-  .flipswitch:after
-  {
-      left:2%;
-      content: "未完成";
-  }
-  .flipswitch:checked:after
-  {
-      left:53%;
-      content: "完成";
-  }
-</style>
-
+<link href="style.css" rel="stylesheet">
 </head>
+
 <body>
 <!-- https://alexlenail.me/NN-SVG/about.html -->
 <!--             你的帳號 -->
@@ -241,23 +43,30 @@
       <p>作品集總分 <hr><span style="font-size: 88pt;" id="myTotal">00</span> / 80</p><hr><a href="https://tjhsieh.github.io/c/ca/mc2024f/hw/index.html" target="_blank">作業總表</a>
     </div>
     <div class="col-md-3 twenty">
-      <img class="" src="./me.jpg" height="256px">
-	  <p>暫時用頭貼，還有些人設問題在處理@@</p>
+      <center>
+        <img class="" src="./me.jpg" height="256px">
+        <h2>Kalin風凜魂太</h2>
+        <h5>賴冠綸（Kalin Lai）</h5>
+    </center>
     </div>
     <div class="col-md-7 twenty">
       <or>
-        <li>範例展示: <a href="https://tjhsieh.github.io/mc2024f/" target="_blank">https://tjhsieh.github.io/mc2024f/</a></li>
-        <li>範例下載: <a href="https://github.com/tjhsieh/mc2024f/" target="_blank">https://github.com/tjhsieh/mc2024f/</a></li>
+        <li>空白作品集頁面：<a href="https://tjhsieh.github.io/mc2024f/" target="_blank">https://tjhsieh.github.io/mc2024f/</a></li>
+        <li>空白作品集樣板：<a href="https://github.com/tjhsieh/mc2024f/" target="_blank">https://github.com/tjhsieh/mc2024f/</a></li>
       </or>
       <hr>
       <or>
-        <li>大頭照: 使用 <a href="https://www.microsoft.com/zh-tw/microsoft-copilot">Copilot</a> 詠唱詞 AI 生成 VTuber 或 VRoid Studio 人物截圖。</li>
-        <li>大頭照: 命名為 me.jpg (皆為小寫字母) 然後覆蓋該檔案夾中的 me.jpg。 </li>
-        <li>大頭照: 上傳到 GitHub <a href="https://github.com/你的帳號/mc2024f/"> https://github.com/你的帳號/mc2024f/ </a></li>
+        <li>人物設定：<a href="https://reurl.cc/6jqoZM" target="_blank">https://reurl.cc/6jqoZM </a></li>
+        <li>大頭照：使用 <a href="https://www.midjourney.com/">Midjourney</a> 詠唱生成 </li>
+        <li>本人社群帳號連結：<a href="https://portaly.cc/KalinLai-void">https://portaly.cc/KalinLai-void</a>（含 YT、Twitter、FB等）</li>
       </or>
       <hr>
-        <li>設定 GitHub Pages，修改 Settings -> Pages -> Branch 選 main -> 按下 Save。</li>
-        <li>前往 <a href="https://github.com/你的帳號/mc2024f/" target="_blank"> https://你的帳號.github.io/mc2024f/</a> 檢查是否能夠正常顯示。</li>
+      <or>
+        <li>作業順序有微調：作業2 -> 作業1 -> 作業3 -> 作業4 -> 作業5 -> 作業6</li>
+        <li>該順序為劇本故事時間線發展，而每個作業的故事七步驟標題，放在影片/投影片左下方</li>
+        <li>前四個作業我將其包成一個初配信直播：<a href="https://youtu.be/_D5FNE-EU-w">https://youtu.be/_D5FNE-EU-w</a>並剪輯精華</li>
+        <li>前五個作業的直播BGM為<a href="https://suno.com/" target="_blank">Suno.ai</a>生成</li>
+        <li>因為想呈現理想人設的V皮，有做一些研究的嘗試運用於作業中，研究細節與常識可見最下方區塊</li>
       </or>
     </div>
   </div>
@@ -265,46 +74,15 @@
   <!-- ------------------------------------------------>
   <div class="row hw12 toprow bottomrow">
     <div class="col-md-5 twenty">
-      <p><a href="https://docs.google.com/presentation/d/11pX-6RIfJs8QXIu4cogX3p1lgdEx-ppW/edit#slide=id.p6" target="_blank">作業01</a>  (10%)</p>
+      <p><a href="https://docs.google.com/presentation/d/1VsdtB07jCwC4YfnHmr9VaDwTy2UsmpZe/edit#slide=id.p6" target="_blank">腳本01（作業02）──前導</a> (10%)</p>
       <hr>
-      <p>投影片 <a href="https://github.com/你的帳號/mc2024f/hw01.pptx">https://github.com/你的帳號/mc2024/hw01.pptx</a></p>
+      <p>投影片：<a href="https://github.com/kalinlai-void/mc2024f/Clip01.pptxx" target="_blank">https://github.com/kalinlai-void/mc2024f/Clip01.pptx</a></p>
+      <p>劇本：<a href="https://reurl.cc/EgQ3rn" target="_blank">https://reurl.cc/EgQ3rn</a></p>
       <hr>
-      <p>心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。</p>
-      <hr>
-      <!-- hw01: 評分表 -->
-      <table>
-        <tr><th>分數</th><th>完成後打勾</th><th>配分</th><th>分項描述</th></tr>
-        <tr><td rowspan="5" id="myTotal1"></td>
-            <td><input type="checkbox" class="flipswitch" id="myCheckbox11" checked></td><td id='m11'>2</td><td>Simple baseline - 一分鐘(60~120秒)</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox12"></td><td id='m12'>2</td><td>Simple baseline - 影片加上字幕</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox13" ></td><td id='m13'>2</td><td>Medium baseline - 七步驟(Copilot插圖)</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox14"></td><td id='m14'>2</td><td>Medium baseline  - 插圖符合Booth模型 </td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox15"></td><td id='m15'>2</td><td>Strong baseline - OBS直播到YouTube </td></tr>
-      </table>
-      <!-- hw01: 評分表 -->
-    </div>
-    <div class="col-md-7 twenty">
-      左邊鑲嵌 <span style="color:yellow;">有字幕</span> 影片，右邊鑲嵌 <span style="color:yellow;">直播</span> 影片。<br>
-      <!-- 左邊鑲嵌 有字幕 影片，右邊鑲嵌 直播 影片。 -->
-      <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">
-      <!--
-      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/Z8dergLd-5o?si=hp6HvphjXpGszNhy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      -->    
-      <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">   
-      <!--
-      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/7Vy7B2bg70k?si=lURYcadwUAfxQkzQ&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      -->  
-    </div>
-  </div>
-
-  <!-- ------------------------------------------------>
-  <div class="row hw12 toprow bottomrow">
-    <div class="col-md-5 twenty">
-      <p><a href="https://docs.google.com/presentation/d/1VsdtB07jCwC4YfnHmr9VaDwTy2UsmpZe/edit#slide=id.p6" target="_blank">作業02</a> (10%)</p>
-      <hr>
-      <p>投影片 <a href="https://github.com/你的帳號/mc2024f/hw02.pptx">https://github.com/你的帳號/mc2024/hw02.pptx</a></p>
-      <hr>
-      <p>心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。</p>
+      <p>心得報告：<br>
+        &emsp;&emsp;Vtuber Studio（VTS）其實之前就碰過，所以上手很快，只是要搭配一些自己安排橋段的想法就要思考XD<br>
+        &emsp;&emsp;而我會想把作業2放到前面，是因為想要呈現初配信一開始有前導動畫的感覺，因為冒險故事很適合拿來講人設的故事。同時，也是我第一次嘗試寫劇本以及演戲劇（甚至還是開台演）。雖然演得不太滿意，有些檻還是沒跨過，但寫劇本挺開心的，這個故事之後應該也會延續下去。
+      </p>
       <hr>
       <!-- hw02: 評分表 -->
       <table>
@@ -312,128 +90,169 @@
         <tr><td rowspan="5" id="myTotal2"></td>
             <td><input type="checkbox" class="flipswitch" id="myCheckbox21"></td><td id='m21'>2</td><td>Simple baseline - 三分鐘(120~180秒)</td></tr>
         <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox22" checked></td><td id='m22'>2</td><td>Simple baseline - 影片加上字幕</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox23"></td><td id='m23'>2</td><td>Medium baseline - 七步驟Cp插圖+轉化</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox24"></td><td id='m24'>2</td><td>Medium baseline  - 插圖符合Booth模型 </td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox25"></td><td id='m25'>2</td><td>Strong baseline - OBS直播到YouTube </td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox23" checked></td><td id='m23'>2</td><td>Medium baseline - 七步驟Cp插圖+轉化</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox24" checked></td><td id='m24'>2</td><td>Medium baseline  - 插圖符合Booth模型 </td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox25" checked></td><td id='m25'>2</td><td>Strong baseline - OBS直播到YouTube </td></tr>
       </table>
       <!-- hw02: 評分表 -->
     </div>
     <div class="col-md-7 twenty">
       <!-- 左邊鑲嵌 有字幕 影片，右邊鑲嵌 直播 影片。 -->
-      <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">
-      <!--
-      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/7B4dnUf9b0Y?si=EJ1MlZnnW79CWKkL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      -->    
-      <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">   
-      <!--
-      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/sPcipboRvNs?si=eruxEQUZ-4u92R-E&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      -->
+      <!--<img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">-->
+      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/_D5FNE-EU-w?si=IBnJXJHFtAV-wB00&amp;start=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          
+      <!--<img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">-->   
+      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/_D5FNE-EU-w?si=IBnJXJHFtAV-wB00&amp;start=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
   
   <!-- ------------------------------------------------>
   <div class="row hw12 toprow bottomrow">
     <div class="col-md-5 twenty">
-      <p><a href="https://docs.google.com/presentation/d/1fKmaYBzpqTZxlNjlemLJKQNbnJwc9fsq/edit#slide=id.p6" target="_blank">作業03</a> (10%)</p>
+      <p><a href="https://docs.google.com/presentation/d/11pX-6RIfJs8QXIu4cogX3p1lgdEx-ppW/edit#slide=id.p6" target="_blank">腳本02（作業01）──自我介紹</a>  (10%)</p>
       <hr>
-      <p>投影片 <a href="https://github.com/你的帳號/mc2024f/hw03.pptx">https://github.com/你的帳號/mc2024/hw03.pptx</a></p>
+      <p>投影片：<a href="https://github.com/kalinlai-void/mc2024f/Clip02.pptx" target="_blank">https://github.com/kalinlai-void/mc2024f/Clip02.pptx</a></p>
+      <p>劇本：<a href="https://reurl.cc/d1aEWz" target="_blank">https://reurl.cc/d1aEWz</a></p>
       <hr>
-      <p>心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。</p>
+      <p>心得報告：<br>
+        &emsp;&emsp;之前因為都是用VTS，第一次用nizimalLive，有些操作不太熟悉，但達到作業需求很容易。<br>
+        &emsp;&emsp;而我講完前導故事，才進到自我介紹，講講我自己的背景，基本上這就是符合我人生的狀況，我把虛擬人設幾乎貼合現實，且想要跟一般VTuber初配信一樣，會填表介紹自己，我也盡可能包在其中了。<br>
+        &emsp;&emsp;雖然上課老師是要求使用Copilot去生圖，但我個人還是比較習慣Stable Diffusion跟Midjourney，也比較滿意，所以我的插圖都是使用Midjourney去產生。
+      </p>
+      <hr>
+      <!-- hw01: 評分表 -->
+      <table>
+        <tr><th>分數</th><th>完成後打勾</th><th>配分</th><th>分項描述</th></tr>
+        <tr><td rowspan="5" id="myTotal1"></td>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox11"></td><td id='m11'>2</td><td>Simple baseline - 一分鐘(60~120秒)</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox12" checked></td><td id='m12'>2</td><td>Simple baseline - 影片加上字幕</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox13" checked></td><td id='m13'>2</td><td>Medium baseline - 七步驟(Copilot插圖)</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox14" checked></td><td id='m14'>2</td><td>Medium baseline  - 插圖符合Booth模型 </td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox15" checked></td><td id='m15'>2</td><td>Strong baseline - OBS直播到YouTube </td></tr>
+      </table>
+      <!-- hw01: 評分表 -->
+    </div>
+    <div class="col-md-7 twenty">
+      左邊鑲嵌 <span style="color:yellow;">有字幕</span> 影片，右邊鑲嵌 <span style="color:yellow;">直播</span> 影片。<br>
+      <!-- 左邊鑲嵌 有字幕 影片，右邊鑲嵌 直播 影片。 -->
+      <!--<img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">-->
+      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/_D5FNE-EU-w?si=kdUxS9WT3nFBHRlk&amp;start=391" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
+      <!--<img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">-->      
+      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/_D5FNE-EU-w?si=kdUxS9WT3nFBHRlk&amp;start=391" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12 toprow bottomrow">
+    <div class="col-md-5 twenty">
+      <p><a href="https://docs.google.com/presentation/d/1fKmaYBzpqTZxlNjlemLJKQNbnJwc9fsq/edit#slide=id.p6" target="_blank">腳本03（作業03）──修煉之路</a> (10%)</p>
+      <hr>
+      <p>投影片：<a href="https://github.com/kalinlai-void/mc2024f/Clip03.pptx" target="_blank">https://github.com/kalinlai-void/mc2024f/Clip03.pptx</a></p>
+      <p>劇本：<a href="https://reurl.cc/ZZN0bp" target="_blank">https://reurl.cc/ZZN0bp</a></p>
+      <hr>
+      <p>心得報告：<br>
+        &emsp;&emsp;這邊基本上老師沒特別說要用什麼軟體，所以我大多情況下是使用想嘗試的研究模型──THA（雖然前幾份就已經是了，只是每個作業都有包裝而已XD），可以看頁面最下方，我有一些研究的心得跟比較。主要是希望能讓自己的人設動起來，所以就想嘗試看看。<br>
+        &emsp;&emsp;而這邊是要講校園故事，我不太希望偏離主題太多，所以這邊我想了蠻久，最終還是以自我介紹中提到的「修煉之路」來延伸，因為其實就是求學經歷，這也算校園故事吧。<br>
+      </p>
       <hr>
       <!-- hw03: 評分表 -->
       <table>
         <tr><th>分數</th><th>完成後打勾</th><th>配分</th><th>分項描述</th></tr>
         <tr><td rowspan="5" id="myTotal3"></td>
             <td><input type="checkbox" class="flipswitch" id="myCheckbox31"></td><td id='m31'>2</td><td>Simple baseline - 三分鐘(120~180秒)</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox32"></td><td id='m32'>2</td><td>Simple baseline - 影片加上字幕</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox32" checked></td><td id='m32'>2</td><td>Simple baseline - 影片加上字幕</td></tr>
         <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox33" checked></td><td id='m33'>2</td><td>Medium baseline - 七步驟(CC0 <span style="color:yellow;">照片</span>)</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox34"></td><td id='m34'>2</td><td>Medium baseline  - 每一頁標明第幾步驟 </td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox35"></td><td id='m35'>2</td><td>Strong baseline - OBS直播到YouTube </td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox34" checked></td><td id='m34'>2</td><td>Medium baseline  - 每一頁標明第幾步驟 </td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox35" checked></td><td id='m35'>2</td><td>Strong baseline - OBS直播到YouTube </td></tr>
       </table>
       <!-- hw03: 評分表 -->
     </div>
     <div class="col-md-7 twenty">
       <!-- 左邊鑲嵌 有字幕 影片，右邊鑲嵌 直播 影片。 -->
-      <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">
-      <!--
-      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/7B4dnUf9b0Y?si=EJ1MlZnnW79CWKkL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      -->    
-      <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">   
-      <!--
-      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/sPcipboRvNs?si=eruxEQUZ-4u92R-E&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      -->    
+      <!--<img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">-->
+      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/_D5FNE-EU-w?si=kdUxS9WT3nFBHRlk&amp;start=768" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+      
+      <!--<img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">-->
+      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/_D5FNE-EU-w?si=kdUxS9WT3nFBHRlk&amp;start=768" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
     </div>
   </div>
   
   <!-- ------------------------------------------------>
   <div class="row hw12 toprow bottomrow">
     <div class="col-md-5 twenty">
-      <p><a href="https://docs.google.com/presentation/d/1iXXcvmW4FlLpgb4kOPlsQRE0aX-ZQj2a/edit#slide=id.p6" target="_blank">作業04</a> (10%) </p>
+      <p><a href="https://docs.google.com/presentation/d/1iXXcvmW4FlLpgb4kOPlsQRE0aX-ZQj2a/edit#slide=id.p6" target="_blank">腳本04（作業04）──世界觀延伸與看板娘的誕生</a> (10%) </p>
       <hr>
-      <p>投影片 <a href="https://github.com/你的帳號/mc2024f/mc04.pptx">https://github.com/你的帳號/mc2024/hw04.pptx</a></p>
+      <p>投影片：<a href="https://github.com/kalinlai-void/mc2024f/Clip04.pptx" target="_blank">https://github.com/kalinlai-void/mc2024f/Clip04.pptx</a></p>
+      <p>劇本：<a href="https://reurl.cc/WAO5qO" target="_blank">https://reurl.cc/WAO5qO</a></p>
       <hr>
-      <p>心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。</p>
+      <p>心得報告：<br>
+        &emsp;&emsp;這份作業是要做3D，所以就用VRoid照著我的人設捏了一個模型。之前做遊戲其實就有碰過VRoid，但因為我不是美術職，所以摸得超爛QQ。而這份作業要用Animaze來捕捉，這也是我第一次使用這軟體。<br>
+        &emsp;&emsp;不過後來有切回THA的模型來做直播，為了直播流暢度與效果。而作業需求是職場故事，因為剛好自己相關的人設中，剛好可以延伸過來，所以就導入了另一個角色（本來是我的看板娘）──風凜魂奈，所以也在劇本中讓他登場，做得嘗試還真不少XD
+      </p>
       <hr>
       <!-- hw04: 評分表 -->
       <table>
         <tr><th>分數</th><th>完成後打勾</th><th>配分</th><th>分項描述</th></tr>
         <tr><td rowspan="5" id="myTotal4"></td>
             <td><input type="checkbox" class="flipswitch" id="myCheckbox41"></td><td id='m41'>2</td><td>Simple baseline - 三分鐘(120~180秒)</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox42"></td><td id='m42'>2</td><td>Simple baseline - 影片加上字幕</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox43"></td><td id='m43'>2</td><td>Medium baseline - 七步驟(CC0 <span style="color:yellow;">影片</span>)</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox42" checked></td><td id='m42'>2</td><td>Simple baseline - 影片加上字幕</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox43" checked></td><td id='m43'>2</td><td>Medium baseline - 七步驟(CC0 <span style="color:yellow;">影片</span>)</td></tr>
         <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox44" checked></td><td id='m44'>2</td><td>Medium baseline  - 每一頁標明第幾步驟 </td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox45"></td><td id='m45'>2</td><td>Strong baseline - OBS直播到YouTube </td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox45" checked></td><td id='m45'>2</td><td>Strong baseline - OBS直播到YouTube </td></tr>
       </table>
       <!-- hw04: 評分表 -->
     </div>
     <div class="col-md-7 twenty">
-      <!-- 左邊鑲嵌 有字幕 影片，右邊鑲嵌 直播 影片。 -->
-      <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">
-      <!--
-      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/7B4dnUf9b0Y?si=EJ1MlZnnW79CWKkL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      -->    
-      <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">   
-      <!--
-      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/sPcipboRvNs?si=eruxEQUZ-4u92R-E&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      -->
+      <!--<img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">-->
+      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/_D5FNE-EU-w?si=kdUxS9WT3nFBHRlk&amp;start=1226" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <!--<img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">-->
+      <iframe width="49%" height="100%" src="https://www.youtube.com/embed/_D5FNE-EU-w?si=kdUxS9WT3nFBHRlk&amp;start=1226" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
   
   <!-- ------------------------------------------------>
   <div class="row hw12 toprow bottomrow">
     <div class="col-md-5 twenty">
-      <p><a href="https://docs.google.com/presentation/d/1GMoBxAc1YytVVwHm_TnairZSRW0N9U1E/edit#slide=id.p6" target="_blank">作業05</a> (20%)</p>
+      <p><a href="https://docs.google.com/presentation/d/1GMoBxAc1YytVVwHm_TnairZSRW0N9U1E/edit#slide=id.p6" target="_blank">作業05──軟體展示&唱歌</a> (20%)</p>
       <hr>
-      <p>作業五倉儲 <a href="https://github.com/你的帳號/mc2024fhw06/">https://github.com/你的帳號/mc2024fhw05/</a></p>
+      <p>演唱歌曲：世界は恋に落ちている / CHiCO with HoneyWorks</p>
+      <p>作業五 Repository：<a href="https://github.com/kalinlai-void/mc2024fhw05/" target="_blank">https://github.com/kalinlai-void/mc2024fhw05/</a></p>
       <hr>
-      <p>心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。</p>
+      <p>心得報告：<br>
+        &emsp;&emsp;以資工背景、且非常熟悉Unity的我，這份作業覺得十分簡單。甚至沒有使用Visual Scripting的做法。我只有小寫一些Code，再來就都透過按鈕事件去綁定而已。（整體而言，我拋棄了範例程式的Code，自己改寫了一個比較精簡的做法）<br>
+        &emsp;&emsp;另外，為了直播效果跟畫面感，有微調一些UI的位置。不過我個人覺得最困難的果然還是唱歌，本來想唱跟作業6同一首（也是老師的要求），但顧及成果，還是決定來點變化，唱不同首好了。但是我唱歌不好聽QQQQ
+      </p>
       <hr>
       <!-- hw05: 評分表 -->
       <table>
         <tr><th>分數</th><th>完成後打勾</th><th>配分</th><th>分項描述</th></tr>
         <tr><td rowspan="5" id="myTotal5"></td>
-            <td><input type="checkbox" class="flipswitch" id="myCheckbox51"></td><td id='m51'>2</td><td>Simple baseline - 描述</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox52"></td><td id='m52'>2</td><td>Simple baseline - 描述</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox53"></td><td id='m53'>2</td><td>Medium baseline - 描述</td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox54"></td><td id='m54'>2</td><td>Medium baseline  - 描述 </td></tr>
-        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox55" checked></td><td id='m55'>2</td><td>Strong baseline - 描述 </td></tr>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox51" checked></td><td id='m51'>2</td><td>Simple baseline - Donate功能</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox52" checked></td><td id='m52'>2</td><td>Simple baseline - 動作選單功能</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox53" checked></td><td id='m53'>2</td><td>Medium baseline - 歌曲演唱</td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox54" checked></td><td id='m54'>2</td><td>Medium baseline  - 自製背景音樂 </td></tr>
+        <tr><td><input type="checkbox" class="flipswitch" id="myCheckbox55" checked></td><td id='m55'>2</td><td>Strong baseline - 將角色模型替換成其他角色模型 </td></tr>
       </table>
       <!-- hw05: 評分表 -->
     </div>
     <div class="col-md-7 twenty">
       <!-- 作業五影片製作完畢，上傳到 YouTube 之後，記得鑲嵌你的 YouTube 影片到這裡 -->
-      <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_D5FNE-EU-w?si=kdUxS9WT3nFBHRlk&amp;start=1674" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
   
   <!-- ------------------------------------------------>
   <div class="row hw12 toprow bottomrow">
     <div class="col-md-5 twenty">
-      <p><a href="https://docs.google.com/presentation/d/1nPbkcHzppDkEHSunNISpBrqtrLU48yTd/edit#slide=id.p7" target="_blank">作業06</a> (20%)</p>
+      <p><a href="https://docs.google.com/presentation/d/1nPbkcHzppDkEHSunNISpBrqtrLU48yTd/edit#slide=id.p7" target="_blank">作業06──3D LIVE Showcase</a> (20%)</p>
       <hr>
-      <p>作業六倉儲 <a href="https://github.com/你的帳號/mc2024fhw06/">https://github.com/你的帳號/mc2024fhw06/</a></p>
+      <p>作業六倉儲 <a href="https://github.com/kalinlai-void/mc2024fhw06/" target="_blank">https://github.com/kalinlai-void/mc2024fhw06/</a></p>
       <hr>
-      <p>心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。</p>
+      <p>心得報告：<br>
+
+      </p>
       <hr>
       <!-- hw06: 評分表 -->
       <table>
@@ -450,6 +269,26 @@
     <div class="col-md-7 twenty">
       <!-- 作業六影片製作完畢，上傳到 YouTube 之後，記得鑲嵌你的 YouTube 影片到這裡 -->
       <img src="https://www.svgrepo.com/show/299435/youtube.svg" width="49%">
+    </div>
+  </div>
+  
+  <!-- ------------------------------------------------>
+  <div class="row hw12 toprow bottomrow">
+    <div class="col-md-5 twenty">
+      <p><a href="https://docs.google.com/presentation/d/1nPbkcHzppDkEHSunNISpBrqtrLU48yTd/edit#slide=id.p7" target="_blank">研究嘗試──THA</a> (20%)</p>
+      <hr>
+      <li>talking head(?) anime from a single image 4：<a href="https://pkhungurn.github.io/talking-head-anime-4/" target="_blank">https://pkhungurn.github.io/talking-head-anime-4/</a></li>
+      <li>Demo on my Twitter(X)：<a href="https://x.com/KalinLai_void/status/1865729796841541795">https://x.com/KalinLai_void/status/1865729796841541795</a></li>
+      <li>我有寫一些訓練後及使用後的簡短分析及心得在上方推特文章內</li>
+      <li>以研究tha4為主，但同時也有比較tha3代及tha4代模型</li>
+    </div>
+    <div class="col-md-7 twenty">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <iframe width="49%" height="100%" src="tha-demo-videos/demo.mp4" frameborder="0" allowfullscreen></iframe>
+        <iframe width="49%" height="100%" src="tha-demo-videos/compare-in-ifacemocap.mp4" frameborder="0" allowfullscreen></iframe>
+        <iframe width="49%" height="100%" src="tha-demo-videos/tha3.mp4" frameborder="0" allowfullscreen></iframe>
+        <iframe width="49%" height="100%" src="tha-demo-videos/tha4.mp4" frameborder="0" allowfullscreen></iframe>   
+      </div>
     </div>
   </div>
   
